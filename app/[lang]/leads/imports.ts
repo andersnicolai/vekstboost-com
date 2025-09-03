@@ -1,0 +1,1 @@
+export { AccessibleHeading } from '@/components/ui/accessible-heading' 

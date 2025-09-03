@@ -1,0 +1,158 @@
+{
+  "footer": {
+    "company": {
+      "name": "Vekstboost",
+      "tagline": "Your Growth Partner",
+      "part": "Part of Onedev Solutions",
+      "description": "We help businesses grow through digital marketing and technology.",
+      "address": "Oslo",
+      "zip": "1415",
+      "city": "Oppegård",
+      "email": "hello@vekstboost.com",
+      "phone": "+47 411 66 326"
+    },
+    "services": {
+      "title": "Services",
+      "marketing": "Digital Marketing",
+      "seo": "SEO Optimization",
+      "development": "Website Development",
+      "analytics": "Analytics & Reporting"
+    },
+    "resources": {
+      "title": "Resources",
+      "about": "About Us",
+      "cases": "Case Studies",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "legal": {
+      "copyright": "© 2025 Vekstboost. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookies",
+      "terms": "Terms"
+    },
+    "languages": {
+      "title": "Languages",
+      "no": "Norwegian",
+      "en": "English",
+      "da": "Danish"
+    }
+  },
+  "websiteShowcase": {
+    "title": "And yes, we also build websites",
+    "subtitle": "Modern, fast and user-friendly websites that convert visitors into customers",
+    "vaskefirmaTitle": "Cleaning Company Oslo",
+    "vaskefirmaDescription": "Modern website for a cleaning agency in Oslo",
+    "malerTitle": "Painter Oslo",
+    "malerDescription": "Professional website for painting company with online booking",
+    "akupunkturTitle": "Grimstad Acupuncture",
+    "akupunkturDescription": "Responsive website with online appointment booking",
+    "magnusMidtboTitle": "Magnus Midtbø",
+    "magnusMidtboDescription": "SEO optimization and search ranking for outdoor gear website",
+    "hjorthArkitekterTitle": "Hjorth Architects",
+    "hjorthArkitekterDescription": "Professional architecture website with minimalist and modern expression",
+    "mortenBjerkTitle": "Morten Bjerk Photo",
+    "mortenBjerkDescription": "Photography portfolio with SEO strategy and professional web presence",
+    "terapikarolineTitle": "Therapy Karoline",
+    "terapikarolineDescription": "Complete therapy website with booking system and content strategy",
+    "ergohjelpTitle": "Ergohjelp",
+    "ergohjelpDescription": "Occupational therapy services focused on conversion and SEO optimization",
+    "visitWebsite": "Visit website",
+    "technicalStack": "Technical stack",
+    "pressEscToClose": "Press ESC to close"
+  },
+  "getStarted": {
+    "title": "Get free growth analysis",
+    "subtitle": "See how we can help your business grow",
+    "video": {
+      "title": "See how it works",
+      "url": "https://youtube.com/embed/S6CcEjLxCJ0"
+    },
+    "stats": {
+      "calls": {
+        "number": "100+",
+        "label": "Growth analyses completed"
+      },
+      "conversion": {
+        "number": "35%",
+        "label": "Average growth"
+      },
+      "satisfaction": {
+        "number": "98%",
+        "label": "Customer satisfaction"
+      }
+    },
+    "steps": {
+      "title": "How it works",
+      "items": [
+        {
+          "title": "1. Get free growth analysis",
+          "description": "We analyze your business's digital presence and identify growth opportunities"
+        },
+        {
+          "title": "2. Get tailored strategy",
+          "description": "Based on the analysis, we develop a personalized growth strategy for your business"
+        },
+        {
+          "title": "3. Start your growth journey",
+          "description": "We implement the strategy and follow up with continuous improvements"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "What you get in the growth analysis",
+      "items": [
+        "Detailed analysis of your digital presence",
+        "Identification of growth opportunities",
+        "Competitor analysis",
+        "Improvement recommendations",
+        "Personal follow-up"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact Vekstboost – We help your business grow",
+    "subtitle": "Contact us at Vekstboost for help with digital marketing, SEO and advertising. We help your business grow online.",
+    "form": {
+      "name": "Name",
+      "company": "Company",
+      "phone": "Phone",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "options": {
+        "website": "Website",
+        "marketing": "Digital Marketing",
+        "consulting": "Consulting",
+        "other": "Other"
+      },
+      "submitButton": "Send message",
+      "successMessage": "Thank you for your message! We'll be in touch soon.",
+      "errorMessage": "Sorry, something went wrong. Please try again."
+    }
+  },
+  "hero": {
+    "title": "Digital marketing agency that creates growth for your business",
+    "description": {
+      "main": "We at Vekstboost are a digital marketing agency that helps businesses grow. We offer everything from marketing strategy for businesses to SEO optimization, Google Ads advertising and CRM integrations – always tailored to your business.",
+      "sub": "From digital business card to your most effective sales employee - we build strategic websites that drive measurable growth."
+    },
+    "subtitle": "Get more customers with digital marketing",
+    "cta": "Get free growth analysis",
+    "needsBoost": "Automated growth. No hype.",
+    "stats": {
+      "roi": {
+        "number": "80%",
+        "label": "Average ROI"
+      },
+      "support": {
+        "number": "24/7",
+        "label": "Customer Support"
+      },
+      "satisfaction": {
+        "number": "98%",
+        "label": "Customer Satisfaction"
+      }
+    }
+  }
+} 
