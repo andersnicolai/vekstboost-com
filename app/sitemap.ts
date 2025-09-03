@@ -9,57 +9,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ONLY include pages that actually exist - NO 404s allowed!
   const locales = ['no', 'en', 'da', 'sv']
   
-  // CONFIRMED EXISTING PAGES ONLY
-  const existingPages = [
-    {
-      path: '',
-      priority: 1.0,
-      changeFrequency: 'weekly' as const,
+  // Language-specific routes
+  const routes = {
+    no: {
+      '': { path: '', priority: 1.0, changeFrequency: 'weekly' as const },
+      'kontakt': { path: '/kontakt', priority: 0.9, changeFrequency: 'monthly' as const },
+      'lag-nettside': { path: '/lag-nettside', priority: 0.8, changeFrequency: 'monthly' as const },
+      'leads': { path: '/leads', priority: 0.8, changeFrequency: 'monthly' as const },
+      'getstarted': { path: '/getstarted', priority: 0.9, changeFrequency: 'monthly' as const },
+      'tannlege-markedsforing': { path: '/tannlege-markedsforing', priority: 0.7, changeFrequency: 'monthly' as const },
+      'takk': { path: '/takk', priority: 0.3, changeFrequency: 'yearly' as const },
     },
-    {
-      path: '/kontakt',
-      priority: 0.9,
-      changeFrequency: 'monthly' as const,
+    en: {
+      '': { path: '', priority: 1.0, changeFrequency: 'weekly' as const },
+      'kontakt': { path: '/kontakt', priority: 0.9, changeFrequency: 'monthly' as const }, // Keep as kontakt for now
+      'lag-nettside': { path: '/lag-nettside', priority: 0.8, changeFrequency: 'monthly' as const }, // Keep existing
+      'leads': { path: '/leads', priority: 0.8, changeFrequency: 'monthly' as const },
+      'getstarted': { path: '/getstarted', priority: 0.9, changeFrequency: 'monthly' as const },
+      'tannlege-markedsforing': { path: '/tannlege-markedsforing', priority: 0.7, changeFrequency: 'monthly' as const },
+      'takk': { path: '/takk', priority: 0.3, changeFrequency: 'yearly' as const },
     },
-    {
-      path: '/lag-nettside',
-      priority: 0.8,
-      changeFrequency: 'monthly' as const,
+    da: {
+      '': { path: '', priority: 1.0, changeFrequency: 'weekly' as const },
+      'kontakt': { path: '/kontakt', priority: 0.9, changeFrequency: 'monthly' as const },
+      'lag-nettside': { path: '/lag-nettside', priority: 0.8, changeFrequency: 'monthly' as const },
+      'leads': { path: '/leads', priority: 0.8, changeFrequency: 'monthly' as const },
+      'getstarted': { path: '/getstarted', priority: 0.9, changeFrequency: 'monthly' as const },
+      'tannlege-markedsforing': { path: '/tannlege-markedsforing', priority: 0.7, changeFrequency: 'monthly' as const },
+      'takk': { path: '/takk', priority: 0.3, changeFrequency: 'yearly' as const },
     },
-    {
-      path: '/leads',
-      priority: 0.8,
-      changeFrequency: 'monthly' as const,
-    },
-    {
-      path: '/getstarted',
-      priority: 0.9,
-      changeFrequency: 'monthly' as const,
-    },
-    {
-      path: '/tannlege-markedsforing',
-      priority: 0.7,
-      changeFrequency: 'monthly' as const,
-    },
-    {
-      path: '/takk',
-      priority: 0.3,
-      changeFrequency: 'yearly' as const,
-    },
-  ]
+    sv: {
+      '': { path: '', priority: 1.0, changeFrequency: 'weekly' as const },
+      'kontakt': { path: '/kontakt', priority: 0.9, changeFrequency: 'monthly' as const },
+      'lag-nettside': { path: '/lag-nettside', priority: 0.8, changeFrequency: 'monthly' as const },
+      'leads': { path: '/leads', priority: 0.8, changeFrequency: 'monthly' as const },
+      'getstarted': { path: '/getstarted', priority: 0.9, changeFrequency: 'monthly' as const },
+      'tannlege-markedsforing': { path: '/tannlege-markedsforing', priority: 0.7, changeFrequency: 'monthly' as const },
+      'takk': { path: '/takk', priority: 0.3, changeFrequency: 'yearly' as const },
+    }
+  }
   
   // Generate sitemap entries
   const sitemapEntries: MetadataRoute.Sitemap = []
   
   // Add main pages for each locale
   locales.forEach(locale => {
-    existingPages.forEach(page => {
+    const localeRoutes = routes[locale as keyof typeof routes]
+    Object.values(localeRoutes).forEach(page => {
       const url = `${baseUrl}/${locale}${page.path}`
       
       // Generate alternates for all locales
       const alternates: Record<string, string> = {}
       locales.forEach(altLocale => {
-        alternates[altLocale] = `${baseUrl}/${altLocale}${page.path}`
+        const altRoutes = routes[altLocale as keyof typeof routes]
+        const altPage = Object.values(altRoutes).find(p => p.priority === page.priority)
+        alternates[altLocale] = `${baseUrl}/${altLocale}${altPage?.path || page.path}`
       })
       
       sitemapEntries.push({
